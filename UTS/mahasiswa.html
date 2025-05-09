@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  </head>
+
+  <style>
+    #idnama{
+        border-radius: 5px;
+        width: 80%;
+    }
+    #nim{
+        border-radius: 5px;
+        width: 80%;
+    }
+    #alamat{
+        border-radius: 5px;
+        width: 80%;
+    }
+
+  </style>
+
+  <body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-secondary " data-bs-theme="dark">
+        <div class="container-fluid" >
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav d-flex justify-content-between" style="width:100%">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item mx-auto">
+                  <a class="nav-link active" href="mahasiswa.html">Mahasiswa</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="dosen.html">Dosen</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!--isi halaman-->
+      <div class="container py-4">
+        <h1>Form Mahasiswa</h1>
+      </div>
+      <table>
+        <tr>
+            <td><label for="idnama">Nama</label></td>
+            <td><input  type="text" name="nama" id="idnama" class="mb-3" required autofocus> <!-- required agar form atau inputan wajib diisi oleh user, for dan id berfungsi agar ketika label di klik akan membold kan kotak input label itu sendiri. autofocus berfungsi.. --></td>
+        </tr>
+        <tr>
+            <td><label>NIM</label></td>
+            <td><input  type="number" name="nim" id="nim" class="mb-3"> </td>
+        </tr>
+        <tr>
+            <td><label>Tanggal Lahir</label></td>
+            <td><input type="date" name="tanggal_lahir" class="mb-3"></td>
+        </tr>
+        <tr>
+            <td><label>Jenis Kelamin</label></td>
+            <td><input type="radio" name="jk" value="L"> Laki-laki <!-- value berfungsi agar nilai pilihan inputan oleh user dapat diambil -->
+                <input type="radio" name="jk" value="P"class="mb-3"> Perempuan
+            </td>
+        </tr>
+        <tr>
+            <td><label>Hobi</label></td>
+            <td><input type="checkbox" name="hobi" value="Olahraga"> Olahraga
+                <input type="checkbox" name="hobi" value="Membaca"> Membaca
+                <input type="checkbox" name="hobi" value="Travelling" class="mb-3"> Travelling
+            </td>
+        </tr>
+        <tr>
+            <td><label>Alamat</label></td>
+            
+            <td><textarea name="alamat" rows="5" id="alamat" required class="mb-3"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">
+                <input type="submit" value="Submit" id="button" class="btn btn-primary">
+                <input type="reset" value="Reset" id="button" class="btn btn-warning">
+            </td>
+        </tr>
+    </table>
+
+      <!--footer-->
+    <div class="bg-secondary text-center text-white py-3 mt-5">
+        &copy 2025 Rachel Setiawan. 2401082013.
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+</html>

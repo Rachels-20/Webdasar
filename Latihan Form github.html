@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Latihan Form</title>
+		<meta name="author" content="Rachel Setiawan">
+		<style>
+			body{
+				background-color: gray;
+				margin: 0;
+				padding: 0;
+			}
+			h2{
+				color: white;
+				text-align:center;
+			}
+			#judul{
+				color:black; font-style: italic;
+			}
+			input[type="text"], [type="date"]{
+				border-radius: 15px;
+				background-color: pink;
+				color: white;
+				width: 90%;
+				padding:10px;
+			}
+			*{
+				color: white;
+				font-family: Aptos;
+			}
+			::placeholder{
+				color:black;
+			}
+			input[type="tel"], [type="email"], [type="file"]{
+				color:white;
+				background-color:black;
+				border-radius: 15px;
+				width:90%;
+				padding:10px;
+			}
+			select{
+				background-color: pink;
+				color: white;
+				border-radius: 15px;
+				width:93%;
+				padding:10px;
+			}
+			textarea{
+				background-color: pink;
+				color: white;
+				border-radius: 15px;
+				font-family: Arial;
+				text-align: justify;
+				width: 93%;
+			}
+			#button{
+				font-weight: bold;
+				border-radius: 15px;
+				color: white;
+				background-color: black;
+				padding: 20px;
+				text-align: center;
+			}
+			#button:hover{
+				background-color: pink;
+				font-weight: bold;
+				padding: 20px;
+				color: white;
+			}
+			header{
+				background-color: black;
+				color: white;
+				text-align:center;
+				width: 100%;
+				padding-top: 0px;
+				height: 80px;
+			}
+			h1{
+				padding: 20px;
+				margin-top: 0;
+			}
+			footer{
+				background-color: black;
+				color: white;
+				text-align: center;
+				width: 100%;
+				
+				position: fixed;
+				bottom: 0;
+				
+			}
+			h3{
+				padding: 0px;
+			}
+			main{
+				position: relative;	
+				width: 100%;
+				height: 100%;
+			}
+			table,tr,td{
+			border : white 0px solid;
+			}
+			
+		</style>
+		<!-- pemberian style di tag head, dengan tag style, lalu didalam tag style masukkan tag yang akan diberi style, atau class atau id yang akan diberi style, dengan format seperti diatas -->
+	</head>
+	<body>
+		<header><h1>My Landing Page</h1></header>
+		<main>
+		<h2>Form Pendaftaran</h2>
+		<h2 id="judul">Data Mahasiswa</h2>
+			<form>
+				<table width="100%" height="100%">
+					<tr>
+						<td valign="top" width="50%">
+							<fieldset>
+								<legend>Data Pribadi</legend>
+									<table width="100%" height="100%">
+										<tr>
+											<td width="30%"><label>Nama</label></td>
+											<td>:</td>
+											<td><input placeholder = "Nama Lengkap" type = "text" name="nama" required></td>
+										</tr>
+										<tr>
+											<td><label>Email<label></td>
+											<td>:</td>
+											<td><input type="email" name="email" required></td>
+										</tr>
+										<tr>
+											<td><label>Nomor Telepon</label></td>
+											<td>:</td>
+											<td><input type="tel" name="notelp" required></td>
+										</tr>
+										<tr>
+											<td><label>Alamat</label></td>
+											<td valign="middle">:</td>
+											<td><textarea name="alamat" rows="5" cols="30" required></textarea></td>
+										</tr>
+										<tr>
+											<td><label>Tanggal Lahir</label></td>
+											<td>:</td>
+											<td> <input type="date" name="tanggallahir" required></td>
+										</tr>
+										<tr>
+											<td><label>Jenis Kelamin</label></td>
+											<td>:</td>
+											<td><input type="radio" name="jk" value="Pria" required>Laki-Laki 
+												<input type="radio" name="jk" value="Wanita>" required>Perempuan
+											</td>
+										</tr>
+										<tr>
+											<td><label>Agama</label></td>
+											<td>:</td>
+											<td>
+												<select name="agama" required>
+												<option value="">Pilih Agama</option>
+												<option value="Islam">Islam</option>
+												<option value="Kristen">Kristen</option>
+												<option value="Katholik">Katholik</option>
+												<option value="Hindu">Hindu</option>
+												<option value="Budha">Budha</option>
+												<option value="Konghucu">Konghucu</option>
+											</td>
+										</tr>
+										<tr>
+											<td><label>Pendidikan Terakhir</label></td>
+											<td>:</td>
+											<td>
+												<input type="Radio" name="pendidikan" value="SMA" required> SMA
+												<input type="Radio" name="pendidikan" value="D3"> D3
+												<input type="Radio" name="pendidikan" value="S1"> S1
+											</td>
+										</tr>
+										<tr>
+											<td><label>Pas Foto 3x4<label></td>
+											<td>:</td>
+											<td><input type="file" name="pasfoto" accept="image/*" required></td>
+										</tr>
+										<tr>
+											<td>CV</td>
+											<td>:</td>
+											<td><input type="file" name="cv" accept=".pdf" required></td>
+										</tr>
+									</table>
+							</fieldset>
+						</td>
+						<td valign="top" width="50%">
+							<fieldset>
+								<legend>Data Orang Tua</legend>
+								<table width="100%" height="100%">
+									<tr>
+										<td width="30%"><label>Nama Ayah</label></td>
+										<td>:</td>
+										<td><input placeholder="Nama Lengkap" type="text" name="ayah" required></td>
+									</tr>
+									<tr>
+										<td>Pekerjaan</td>
+										<td>:</td>
+										<td><input type="text" name="pekerjaanayah"></td>
+									</tr>
+									<tr>
+										<td>Alamat</td>
+										<td valign="middle">:</td>
+										<td><textarea name="alamatayah" rows="5" cols="30"></textarea></td>
+									</tr>
+									<tr>
+										<td>Nomor Telepon Ayah</td>
+										<td>:</td>
+										<td><input type="tel" name="nomorayah" required></td>
+									</tr>
+									<tr>
+										<td><label>Nama Ibu</label></td>
+										<td>:</td>
+										<td><input placeholder="Nama Lengkap" type="text" name="ibu" required></td>
+									</tr>
+									<tr>
+										<td>Pekerjaan</td>
+										<td>:</td>
+										<td><input type="text" name="pekerjaanibu" required</td>
+									</tr>
+									<tr>
+										<td>Alamat</td>
+										<td valign="middle">:</td>
+										<td><textarea name="alamatibu" rows="5" cols="30"></textarea></td>
+									</tr>
+									<tr>
+										<td>Nomor Telepon Ibu</td>
+										<td>:</td>
+										<td><input type="tel" name="nomoribu" required></td>
+									</tr>
+									<tr>
+										<td colspan="3" align="center">
+											<input type="submit" value="submit" id="button">
+											<input type="reset" value="reset" id="button">
+										</td>
+									</tr>
+								</table>
+							</fieldset>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</main>
+		<footer><h3>&copy; 2025 My Website. All Rights Reserved</h3></footer>
+	</body>
+</html>
